@@ -27,7 +27,7 @@ export const Main = styled.main`
 
     .nav-links-title {
       font-size: 2.5rem;
-      padding-top: max(15em, 20vh);
+      padding-top: min(15em, 20vh);
       grid-column: 1 / 3;
       align-self: end;
     }

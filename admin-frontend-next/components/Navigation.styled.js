@@ -4,6 +4,7 @@ export const Div = styled.div`
   min-width: 15rem;
   position: relative;
   border-radius: 0.125em;
+  overflow: hidden;
   font-size: 1.75rem;
   font-weight: 500;
   cursor: pointer;
@@ -11,16 +12,8 @@ export const Div = styled.div`
   transition: box-shadow 100ms ease-in-out;
   &:hover {
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 40%);
-
-    &::after {
-      content: ">";
-      font-weight: 700;
-      position: absolute;
-      padding-right: 0.75em;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      animation: fade-in 200ms ease-in forwards;
+    span {
+      background-color: ${(props) => props.theme.PrimaryFG};
     }
   }
   &:active {
@@ -28,9 +21,20 @@ export const Div = styled.div`
   }
   a {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
-    padding: 0.5em;
+    p {
+      padding: 0.5em;
+    }
+    span {
+      display: grid;
+      place-items: center;
+      padding: 0.5em;
+      height: 100%;
+      color: ${(props) => props.theme.PrimaryBG};
+    }
   }
   @keyframes fade-in {
     from {

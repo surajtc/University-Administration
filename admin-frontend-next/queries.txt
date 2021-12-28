@@ -8,6 +8,8 @@ joins
 
 count
 
+count(*[_type=='student'])
+
 *[_type=='student']{name, "enrolledCount": count(enrolled), "enrolled": enrolled[]->{name}}
 
 

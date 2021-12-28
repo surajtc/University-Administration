@@ -6,7 +6,10 @@ export default function Home() {
     <Main>
       <div className="nav-links">
         <h1 className="nav-links-title">Administration Dashboard</h1>
-        <Navigation title={"List of All Students"} link={"/students"} />
+        <Navigation
+          title={"List of All Students"}
+          link={"/students?from=0&to=5"}
+        />
         <Navigation title={"View Avaliable Courses"} link={"/courses"} />
       </div>
     </Main>

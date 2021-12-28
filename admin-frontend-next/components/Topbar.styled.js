@@ -5,5 +5,13 @@ export const Header = styled.header`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6em 0.5em;
+  h1 {
+    padding: 0.5em 0.125em;
+  }
+  .nav-right {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1em;
+  }
 `

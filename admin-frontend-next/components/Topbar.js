@@ -11,7 +11,15 @@ export default function Topbar({ theme, setTheme }) {
           <h1>BU.</h1>
         </a>
       </Link>
-      <ThemeSwitch theme={theme} setTheme={setTheme} />
+      <div className="nav-right">
+        <Link href="/students">
+          <a>Students</a>
+        </Link>
+        <Link href="/courses">
+          <a>Courses</a>
+        </Link>
+        <ThemeSwitch theme={theme} setTheme={setTheme} />
+      </div>
     </Header>
   )
 }

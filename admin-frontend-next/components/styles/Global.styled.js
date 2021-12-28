@@ -42,4 +42,10 @@ background: linear-gradient(
   ${(props) => props.theme.SecondaryFG} 100%
 );
 }
+
+.courses-grid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1em .5em;
+}
 `
