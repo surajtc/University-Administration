@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <ThemeProvider theme={themes[theme]}>
         <Global />
-        <section className="inverse-color">
+        <section className="inverse-color gradient">
           <Topbar theme={theme} setTheme={setTheme} />
         </section>
         <section className="container">

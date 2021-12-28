@@ -32,4 +32,14 @@ a {
     background-color: ${(props) => props.theme.PrimaryFG};
     color: ${(props) => props.theme.PrimaryBG};
 }
+.gradient{
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 30%);
+
+background: ${(props) => props.theme.SecondaryBG};
+background: linear-gradient(
+  90deg,
+  ${(props) => props.theme.SecondaryBG} 0%,
+  ${(props) => props.theme.SecondaryFG} 100%
+);
+}
 `

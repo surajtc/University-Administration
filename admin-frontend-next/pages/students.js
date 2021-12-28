@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { sanityClient } from "sanity"
 
+import Student from "@components/Student"
+
 export default function students({ students }) {
   console.log(students[0].name)
 
@@ -9,7 +11,7 @@ export default function students({ students }) {
       <Link href="/">
         <a>Go Back</a>
       </Link>
-      <h1>students</h1>
+      <Student />
     </div>
   )
 }

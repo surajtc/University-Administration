@@ -1,0 +1,16 @@
+slicing
+
+*[_type=="student"][0...5]{name}
+
+joins
+
+*[_type=='student']{name, "enrolled": enrolled[]->{name}}
+
+count
+
+*[_type=='student']{name, "enrolledCount": count(enrolled), "enrolled": enrolled[]->{name}}
+
+
+API Token
+
+skbxgMjskMY4qBtvAnSh490YvaKMHdmOlxLeaRaxoMZ0zFnI6AklAlek938ZYEL6Wg54usrEv21LXwgIeVYIDyEwzCtjp2LWeduJzd542ah8pAV7qpqtpt1hEXSzoLF1Z2w0fFu7QbfWa6cty5GyIpIOtJfwaO58RIFHa48xeRkiN7grC4VA
