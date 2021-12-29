@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import { Section } from "@styles/StudentPage.styled"
+import { hostURL } from "utils/getHostURL"
 
 export default function Student({ student, courses }) {
   const {
@@ -85,7 +86,7 @@ export default function Student({ student, courses }) {
 
 export async function getServerSideProps(context) {
   const { id } = context.query
-  const res = await fetch(`http://localhost:3000/api/getStudent?id=${id}`)
+  const res = await fetch(`${hostURL()}api/getStudent?id=${id}`)
   const { student, courses } = await res.json()
 
   return {

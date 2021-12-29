@@ -1,11 +1,9 @@
 import Link from "next/link"
 import Course from "@components/Course"
 import CourseForm from "@components/CourseForm"
+import { hostURL } from "utils/getHostURL"
 
-import { useRouter } from "next/router"
 export default function courses({ courses, count }) {
-  const router = useRouter()
-
   return (
     <div>
       <Link href="/">
@@ -31,7 +29,7 @@ export default function courses({ courses, count }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/getAllCourses`)
+  const res = await fetch(`${hostURL()}api/getAllCourses`)
   const { count, courses } = await res.json()
 
   if (!courses.length) {
