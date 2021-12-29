@@ -3,7 +3,7 @@ import { Section } from "./Student.styled"
 import Link from "next/link"
 
 export default function Student({ student }) {
-  const link = `students/${student.name}`
+  const link = `students/${student._id}`
   return (
     <Section>
       <Link href={link}>

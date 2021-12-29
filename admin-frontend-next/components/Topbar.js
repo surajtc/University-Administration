@@ -12,7 +12,7 @@ export default function Topbar({ theme, setTheme }) {
         </a>
       </Link>
       <div className="nav-right">
-        <Link href="/students">
+        <Link href="/students?from=0&to=5">
           <a>Students</a>
         </Link>
         <Link href="/courses">

@@ -48,4 +48,23 @@ background: linear-gradient(
   grid-template-columns: repeat(2, auto);
   gap: 1em .5em;
 }
+.btn{
+  padding: .25em .75em;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  border-radius: 0.125em;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 30%);
+  &:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 40%);
+  }
+  &:active{
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 30%);
+
+  }
+}
 `
