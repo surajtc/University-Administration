@@ -17,7 +17,6 @@
   * API
 * [Screenshots](#Screenshots)
 
-
 ---
 
 ## About
@@ -54,6 +53,7 @@ npm run dev
 
 Sanity is an open-source, API-based CMS that pairs perfectly with Next.js.
 Users can make serverless calls to the Sanity API in Next.js and connect their app to a performant, extensible CMS in only a few lines of code. It's the fastest, most developer-friendly way to build and ship digital content.
+
 * ### Frontend
 
 [__NEXT.js__](https://nextjs.org/) is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites.
@@ -67,3 +67,7 @@ Users can make serverless calls to the Sanity API in Next.js and connect their a
 Next.js has support for [__API__](https://nextjs.org/docs/api-routes/introduction) Routes, which let you easily create an API endpoint as a Node.js serverless function.
 
 ## Screenshots
+
+![Screenshot 1](screenshots/Screenshot1.jpg)
+
+![Screenshot 2](screenshots/Screenshot2.jpg)
