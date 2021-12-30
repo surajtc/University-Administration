@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 
 import { Section } from "./CourseForm.styled"
 
+import { Button } from "./styles/Button.styled"
 export default function CourseForm() {
   const router = useRouter()
 
@@ -21,7 +22,6 @@ export default function CourseForm() {
         body: JSON.stringify(data),
         type: "application/json",
       }).then((res) => {
-        console.log(res.json(), router.pathname)
         reset()
         router.push(router.pathname)
       })
@@ -41,7 +41,7 @@ export default function CourseForm() {
             placeholder="Course Name"
             {...register("name", { required: true })}
           />
-          <input type="submit" />
+          <Button className="inverse-color">Add</Button>
         </div>
         <div>
           <textarea

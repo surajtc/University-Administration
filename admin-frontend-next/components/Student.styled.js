@@ -1,10 +1,13 @@
 import styled from "styled-components"
 
 export const Section = styled.section`
+  .email {
+    display: none;
+  }
   .student-grid {
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(auto, 4fr)) minmax(auto, 4rem) minmax(
+    grid-template-columns: repeat(1, minmax(auto, 4fr)) minmax(auto, 4rem) minmax(
         auto,
         3rem
       );
@@ -40,7 +43,15 @@ export const Section = styled.section`
   }
 
   @media only screen and (min-width: 600px) {
-    width: 80%;
     margin: 0.75em auto;
+    .student-grid {
+      grid-template-columns: repeat(2, minmax(auto, 4fr)) minmax(auto, 4rem) minmax(
+          auto,
+          3rem
+        );
+    }
+    .email {
+      display: block;
+    }
   }
 `

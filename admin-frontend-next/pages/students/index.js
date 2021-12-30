@@ -1,32 +1,35 @@
-import Link from "next/link"
-
+import Head from "next/head"
 import Student from "@components/Student"
 import Pager from "@components/Pager"
 
-// import useSWR from "swr"
+import GoBack from "@components/GoBack"
+import GoHome from "@components/GoHome"
+
+import { Main } from "@components/styles/Main.styled"
 
 import { hostURL } from "utils/getHostURL"
 
-// const fetcher = (url) => fetch(url).then((res) => res.json())
-
 export default function students({ page, students }) {
-  // const { data, error } = useSWR("/api/hello", fetcher)
-  // if (error) return <div>Failed to load</div>
-  // if (!data) return <div>Loading...</div>
-  // console.log(page.count)
   return (
-    <div>
-      <Link href="/">
-        <a>Go Back</a>
-      </Link>
-      <h1>Found total {page.count} records</h1>
+    <Main>
+      <Head>
+        <title>Students | My University</title>
+      </Head>
+      <div className="students-head">
+        <h1 className="gradient">List of All Students</h1>
+        <div className="nav-buttons">
+          <GoHome />
+          <GoBack />
+        </div>
+      </div>
+
       <Pager page={page} />
-      <div className="student-list">
+      <div className="students-list">
         {students.map((student, index) => {
           return <Student key={index} student={student} />
         })}
       </div>
-    </div>
+    </Main>
   )
 }
 

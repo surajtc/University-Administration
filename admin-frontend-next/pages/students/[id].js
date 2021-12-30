@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form"
 import { Section } from "@styles/StudentPage.styled"
 import { hostURL } from "utils/getHostURL"
-
+import { Main } from "@components/styles/Main.styled"
+import GoHome from "@components/GoHome"
+import GoBack from "@components/GoBack"
+import { Button } from "@components/styles/Button.styled"
 export default function Student({ student, courses }) {
   const {
     register,
@@ -19,14 +22,12 @@ export default function Student({ student, courses }) {
       _id: student._id,
       courses: courses,
     }
-    console.log(body)
     try {
       await fetch("/api/updateCourse", {
         method: "POST",
         body: JSON.stringify(body),
         type: "application/json",
       }).then((res) => {
-        console.log(res.json())
         // reset()
         // router.push(router.pathname)
       })
@@ -49,38 +50,45 @@ export default function Student({ student, courses }) {
     }
   })
   return (
-    <Section>
-      <div className="student-info">
-        <h2>{student.name}</h2>
-        <h3>{student.dob}</h3>
-        <h3>{student.email}</h3>
+    <Main>
+      <div className="students-head">
+        <h1 className="gradient">Student Information</h1>
+        <div className="nav-buttons">
+          <GoHome />
+          <GoBack />
+        </div>
       </div>
-
-      <form onSubmit={handleSubmit(onSubmit)} className="course-update-form">
-        <div>
-          <h3>Enrolled Courses</h3>
-          <button className="btn">Update</button>
+      <Section>
+        <div className="student-info">
+          <h2>Name : {student.name}</h2>
+          <h3>DOB &emsp;&nbsp; : {student.dob}</h3>
+          <h3>Email &emsp;: {student.email}</h3>
         </div>
-
-        <div>
-          {enrolledCourses.map((course, index) => {
-            return (
-              <label key={index} htmlFor={course._id}>
-                {course.name}
-                <input
-                  type="checkbox"
-                  id={course._id}
-                  defaultChecked={course.enrolled}
-                  placeholder={course.name}
-                  {...register(course._id, {})}
-                />
-                <span className="checkmark"></span>
-              </label>
-            )
-          })}
-        </div>
-      </form>
-    </Section>
+        <form onSubmit={handleSubmit(onSubmit)} className="course-update-form">
+          <div>
+            <h2>Enrolled Courses</h2>
+            <Button className="inverse-color">Update</Button>
+          </div>
+          <div className="enrolled-courses">
+            {enrolledCourses.map((course, index) => {
+              return (
+                <label key={index} htmlFor={course._id}>
+                  {course.name}
+                  <input
+                    type="checkbox"
+                    id={course._id}
+                    defaultChecked={course.enrolled}
+                    placeholder={course.name}
+                    {...register(course._id, {})}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+              )
+            })}
+          </div>
+        </form>
+      </Section>
+    </Main>
   )
 }
 

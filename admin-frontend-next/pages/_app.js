@@ -1,5 +1,6 @@
 import { ThemeProvider } from "styled-components"
 import { useState } from "react"
+import Head from "next/head"
 
 import Topbar from "@components/Topbar"
 import { Global } from "@styles/Global.styled"
@@ -10,6 +11,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>My University | Administration</title>
+      </Head>
       <ThemeProvider theme={themes[theme]}>
         <Global />
         <section className="inverse-color gradient">

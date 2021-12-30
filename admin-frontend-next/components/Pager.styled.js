@@ -1,9 +1,13 @@
 import styled from "styled-components"
 
 export const Div = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  h3 {
+    font-weight: normal;
+  }
   .page-selector {
-    width: 80%;
-    margin: 0 auto;
     color: inherit;
     background-color: inherit;
   }
@@ -11,9 +15,7 @@ export const Div = styled.div`
     background-color: ${(props) => props.theme.PrimaryBG};
     color: ${(props) => props.theme.PrimaryFG};
   }
-  [class*="option"] {
-    /* background-color: ${(props) => props.theme.PrimaryBG}; */
-  }
+
   [class*="container"] {
     border-color: none;
     outline: none;
@@ -23,7 +25,13 @@ export const Div = styled.div`
       outline-color: ${(props) => props.theme.PrimaryFG};
     }
   }
-  #react-select-3-live-region:focus {
-    border-color: yellow;
+  .stats {
+    display: none;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .stats {
+      display: block;
+    }
   }
 `

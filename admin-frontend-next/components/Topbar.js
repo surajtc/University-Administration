@@ -8,7 +8,7 @@ export default function Topbar({ theme, setTheme }) {
     <Header className="container">
       <Link href="/">
         <a>
-          <h1>BU.</h1>
+          <h1>MU.</h1>
         </a>
       </Link>
       <div className="nav-right">

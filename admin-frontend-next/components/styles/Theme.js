@@ -6,14 +6,14 @@
 const LightTheme = {
   PrimaryFG: "#004460",
   PrimaryBG: "#ffffff",
-  SecondaryFG: "#008192",
+  SecondaryFG: "#00acc2",
   SecondaryBG: "#00E3FF",
 }
 const DarkTheme = {
-  PrimaryFG: "#E9EBE8",
-  PrimaryBG: "#212529",
-  SecondaryFG: "#CED4DA",
-  SecondaryBG: "#6C757D",
+  PrimaryFG: "#ffffff",
+  PrimaryBG: "#002a3b",
+  SecondaryFG: "#00E3FF",
+  SecondaryBG: "#00acc2",
 }
 
 export const themes = {

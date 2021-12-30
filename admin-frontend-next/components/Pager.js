@@ -33,10 +33,9 @@ export default function Pager({ page }) {
       label: `Page ${page.index}`,
     }
   })
-  console.log(options)
   //   console.log(pages)
 
-  const [selectedPage, setSelectedPage] = useState(options[1])
+  const [selectedPage, setSelectedPage] = useState(options[0])
   const router = useRouter()
   function fetchPage(page) {
     router.push(page.value)
@@ -44,10 +43,13 @@ export default function Pager({ page }) {
   }
   return (
     <Div>
-      <h3>
-        Dispalying results {pageFrom} to {pageTo} out of {page.count}
-      </h3>
-      <div className="page-selector" id="pageSelector">
+      <div>
+        <h1>Found {page.count} Records</h1>
+        <h3 className="stats">
+          Dispalying results {pageFrom} to {pageTo} out of {page.count}
+        </h3>
+      </div>
+      <div className="page-selector">
         <Select
           defaultValue={selectedPage}
           options={options}

@@ -9,7 +9,7 @@ export default function Student({ student }) {
       <Link href={link}>
         <a className="student-grid">
           <h3>{student.name}</h3>
-          <h3>{student.email}</h3>
+          <h3 className="email">{student.email}</h3>
           <h3>{student.enrolled}</h3>
           <span>
             <MdDoubleArrow />

@@ -1,14 +1,18 @@
 import Navigation from "@components/Navigation"
 import { Main } from "@styles/Main.styled"
+import Head from "next/head"
 
 export default function Home() {
   return (
     <Main>
-      <ul>
-        <li>go back / home component next router</li>
-      </ul>
+      <Head>
+        <title>Welcome to My University</title>
+      </Head>
+      <h1 className="index-head">
+        Welcome to <span className="gradient">MY UNIVERSITY.</span>
+      </h1>
       <div className="nav-links">
-        <h1 className="nav-links-title">Administration Dashboard</h1>
+        <h1 className="nav-links-title inverse-color">Admin Dashboard</h1>
         <Navigation
           title={"List of All Students"}
           link={"/students?from=0&to=5"}

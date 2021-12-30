@@ -23,7 +23,7 @@ export const Section = styled.section`
       gap: 0.25em;
     }
     label {
-      font-size: 1.25rem;
+      font-size: 1rem;
       cursor: pointer;
       position: relative;
       font-weight: 500;
@@ -74,6 +74,29 @@ export const Section = styled.section`
       }
       & input:checked ~ .checkmark {
         background-color: ${(props) => props.theme.PrimaryFG};
+      }
+    }
+  }
+  .enrolled-courses {
+    display: grid;
+    padding-top: 1em;
+    label {
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 30%);
+      padding: 0.5em;
+      margin-block: 0.25em;
+
+      &:hover {
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 40%);
+      }
+      &:active {
+        box-shadow: 1px 1px 6px rgba(0, 0, 0, 30%);
+      }
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .course-update-form {
+      label {
+        font-size: 1.25rem;
       }
     }
   }

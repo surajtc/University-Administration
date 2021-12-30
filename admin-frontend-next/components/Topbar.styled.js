@@ -7,11 +7,17 @@ export const Header = styled.header`
   align-items: center;
   h1 {
     padding: 0.5em 0.125em;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .nav-right {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: 1em;
+    a {
+      font-weight: 500;
+    }
   }
 `

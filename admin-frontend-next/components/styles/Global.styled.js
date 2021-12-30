@@ -13,8 +13,9 @@ body{
     padding: 0;
     margin: 0;
 
-    transition: color 100ms ease-in-out, 
-                background-color 100ms ease-in-out;
+    transition: color 50ms ease-out, 
+                background-color 50ms ease-out, 
+                background 50ms ease-out;
 }
 a {
     color: inherit;
@@ -33,7 +34,6 @@ a {
     color: ${(props) => props.theme.PrimaryBG};
 }
 .gradient{
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 30%);
 
 background: ${(props) => props.theme.SecondaryBG};
 background: linear-gradient(
@@ -43,11 +43,7 @@ background: linear-gradient(
 );
 }
 
-.courses-grid{
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 1em .5em;
-}
+
 .btn{
   padding: .25em .75em;
   font-family: inherit;
